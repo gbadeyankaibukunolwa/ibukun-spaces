@@ -16,6 +16,9 @@
     .comments textarea, form input, form textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; }
     .comments button, form button { margin-top: 5px; padding: 8px 12px; background: #333; color: white; border: none; border-radius: 5px; }
     #darkToggle { position: fixed; top: 20px; right: 20px; z-index: 1000; background: #333; color: white; padding: 10px; border-radius: 5px; cursor: pointer; }
+    .media { margin-top: 20px; }
+    .media img, .media video { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
+    .media a { display: inline-block; margin-top: 10px; color: #0077cc; }
   </style>
 </head>
 <body>
@@ -28,6 +31,16 @@
     <div class="post">
       <h3>Welcome to My World</h3>
       <p>This is where I share my thoughts, ideas, and creative work. Feel free to like and comment!</p>
+
+      <div class="media">
+        <img src="images/design.jpg" alt="My Design" />
+        <video controls>
+          <source src="videos/intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <a href="files/resume.pdf" download>Download My Resume</a>
+      </div>
+
       <button class="like-btn" onclick="likePost(this)">Like (<span>0</span>)</button>
 
       <div class="comments">
